@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Gemini Email Finder",
+  "description": "An intelligent web application that uses the Gemini API to discover business email addresses based on a specified service and city. It features a two-phase search process for targeted and efficient email extraction.",
+  "requestFramePermissions": []
+}
