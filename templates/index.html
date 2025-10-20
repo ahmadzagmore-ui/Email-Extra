@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>أداة البحث عن الإيميلات</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>أداة البحث عن الإيميلات</h1>
+    <div class="designer">المصمم: <strong>Ahmad alzaghmouri</strong></div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="field">
+        <label>الخدمة</label>
+        <input id="service" type="text" placeholder="مثال: مطاعم" />
+      </div>
+      <div class="field">
+        <label>المدينة</label>
+        <input id="city" type="text" placeholder="مثال: الرياض" />
+      </div>
+      <div class="actions">
+        <button id="startStopBtn" class="btn primary">ابدأ البحث</button>
+        <button id="continuousBtn" class="btn secondary" data-active="false">البحث المستمر</button>
+        <button id="resetBtn" class="btn danger">تصفير النتائج</button>
+        <button id="copyBtn" class="btn">نسخ الإيميلات</button>
+      </div>
+    </section>
+
+    <section class="status">
+      <div id="statusText">جاهز</div>
+    </section>
+
+    <section class="results">
+      <div class="results-header">
+        <div>#</div>
+        <div>الإيميل</div>
+        <div>الموقع</div>
+      </div>
+      <div id="resultsList" class="results-list"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>تنبيه: يتم جلب النتائج مباشرة من الإنترنت (Google وGoogle Maps) وعرضها فورًا.</small>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

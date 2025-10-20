@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; background: #0d0d0f; color: #f2f2f2; }
+
+.app-header { background: linear-gradient(90deg, #990000, #000000); padding: 18px 24px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #330000; }
+.app-header h1 { margin: 0; font-size: 22px; }
+.app-header .byline { font-size: 14px; color: #ffb3b3; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+.controls { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; align-items: end; margin-bottom: 16px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 13px; color: #ff8080; }
+.field input { padding: 10px 12px; background: #111; color: #fff; border: 1px solid #330000; border-radius: 6px; }
+
+.buttons { grid-column: span 4; display: flex; gap: 8px; }
+.btn { padding: 10px 14px; border-radius: 8px; cursor: pointer; border: 1px solid transparent; font-weight: 600; }
+.btn.primary { background: #cc0000; color: #fff; }
+.btn.secondary { background: #1a1a1d; color: #ff8080; border-color: #330000; }
+.btn.warn { background: #330000; color: #ffcccc; border-color: #660000; }
+.btn.ghost { background: transparent; color: #ff9999; border-color: #330000; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.hint { grid-column: span 4; color: #ffcccc; font-size: 13px; }
+.keys-hint { grid-column: span 4; color: #999; font-size: 12px; }
+
+.stats { display: flex; gap: 18px; align-items: center; margin: 12px 0 16px; color: #ff9999; }
+
+.results table { width: 100%; border-collapse: collapse; background: #0f0f12; border: 1px solid #330000; border-radius: 8px; overflow: hidden; }
+.results thead th { text-align: right; background: #1a0000; color: #ffcccc; padding: 10px; border-bottom: 1px solid #330000; }
+.results tbody td { padding: 10px; border-bottom: 1px solid #220000; }
+.results tbody tr:nth-child(odd) { background: #101012; }
+.results a { color: #ff6666; text-decoration: none; }
+
+.app-footer { color: #777; font-size: 12px; text-align: center; padding: 14px 0 30px; }
