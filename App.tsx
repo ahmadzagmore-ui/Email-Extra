@@ -64,7 +64,7 @@ export default function App() {
       };
       
       try {
-        const searchedEmailsSet = new Set(emails.map(e => e.email.toLowerCase()));
+        const searchedEmailsSet = new Set<string>(emails.map(e => e.email.toLowerCase()));
         const result = await findBusinessEmailsStream(
             city, 
             service, 
