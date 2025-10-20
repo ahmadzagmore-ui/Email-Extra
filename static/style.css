@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+:root {
+  --red: #e50914;
+  --black: #0b0b0b;
+  --gray: #1f1f1f;
+  --text: #f5f5f5;
+  --muted: #bbbbbb;
+  --accent: #ff2d55;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body {
+  font-family: 'Cairo', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans Arabic', sans-serif;
+  background: var(--black);
+  color: var(--text);
+}
+
+.app-header {
+  background: linear-gradient(90deg, var(--black), var(--red));
+  padding: 24px;
+  border-bottom: 1px solid #2a2a2a;
+}
+.app-header h1 { margin: 0; font-weight: 700; }
+.app-header .designer { color: var(--muted); margin-top: 6px; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  background: var(--gray);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+}
+.field label { display: block; margin-bottom: 6px; color: var(--muted); }
+.field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #121212;
+  color: var(--text);
+}
+
+.actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #222;
+  color: var(--text);
+  transition: transform .05s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn.primary { background: var(--red); }
+.btn.secondary { background: #353535; }
+.btn.danger { background: #8b0000; }
+.btn[disabled] { opacity: .6; cursor: not-allowed; }
+
+.status { margin: 18px 0; color: var(--muted); }
+
+.results { border: 1px solid #2a2a2a; border-radius: 12px; overflow: hidden; }
+.results-header, .result-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 2fr;
+  gap: 12px;
+  padding: 10px 12px;
+}
+.results-header { background: #141414; color: #aaa; font-weight: 600; border-bottom: 1px solid #2a2a2a; }
+.results-list { max-height: 60vh; overflow: auto; }
+.result-row { border-bottom: 1px solid #1e1e1e; }
+.result-row a { color: var(--accent); text-decoration: none; }
+
+.app-footer { text-align: center; padding: 24px; color: var(--muted); }

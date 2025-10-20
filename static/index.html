@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>أداة البحث عن الإيميلات</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>أداة البحث عن الإيميلات</h1>
+    <div class="byline">المصمم: <strong>Ahmad alzaghmouri</strong></div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="field">
+        <label>المدينة</label>
+        <input id="city" type="text" placeholder="مثال: الرياض" />
+      </div>
+      <div class="field">
+        <label>الخدمة</label>
+        <input id="service" type="text" placeholder="مثال: مطاعم، صيانة تكييف..." />
+      </div>
+      <div class="buttons">
+        <button id="startStopBtn" class="btn primary">ابدأ البحث</button>
+        <button id="continuousBtn" class="btn secondary">بحث مستمر</button>
+        <button id="resetBtn" class="btn warn">تصفير النتائج</button>
+        <button id="copyBtn" class="btn ghost">نسخ الإيميلات</button>
+      </div>
+      <div class="hint">عند البدء سيتم بث النتائج مباشرة (1، 2، 3...). يمكنك الإيقاف من نفس الزر.</div>
+      <div class="keys-hint">تأكد من إضافة مفاتيح Google API في الخادم.</div>
+    </section>
+
+    <section class="stats">
+      <div>الإجمالي: <span id="count">0</span></div>
+      <div>الحالة: <span id="status">جاهز</span></div>
+    </section>
+
+    <section class="results">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>الإيميل</th>
+            <th>المصدر</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="app-footer">يرجى احترام سياسات Google واستخدام مفاتيح API الرسمية. سيتم التحقق من MX لضمان واقعية الإيميلات.</footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
